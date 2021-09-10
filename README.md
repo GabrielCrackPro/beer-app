@@ -9,7 +9,7 @@ Data of beers and all the relevant information
 
 ## TODO
 - [x] Add breweries page
- - [ ] Add pagination
+  - [ ] Add pagination
 - [ ] Add beers page
 - [ ] Add random beer page
 - [ ] Debug 🔧
