@@ -4,6 +4,7 @@ const API_URLS = {
  random: "https://api.punkapi.com/v2/beers/random"
 }
 const breweriesContainer = document.querySelector(".breweries-container")
+const moreBtn = document.querySelector(".more-btn")
 
 const getData = async (url) => {
 let data = fetch(url).then(response => response.json())
@@ -13,8 +14,8 @@ return data
 const formatDate = (date) => {
 return new Date(date).toLocaleDateString()
 }
-window.onload = async () => {
 let actualPage = 1
+const getBreweries = async () => {
 let breweries = await getData(API_URLS.breweries + `?page=${actualPage}`)
 breweries.forEach(brewery => {
 if(brewery.street == null) brewery.street = ''
@@ -39,3 +40,8 @@ breweriesContainer.innerHTML += `
 `
 })
 }
+moreBtn.addEventListener("click", () => {
+actualPage += 1
+getBreweries()
+})
+window.onload = getBreweries()
