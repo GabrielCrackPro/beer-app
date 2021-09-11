@@ -12,6 +12,6 @@ Data of beers and all the relevant information
   - [ ] Add pagination
 - [x] Add beers page
   - [x] Add pagination
-- [ ] Add random beer page
+- [x] Add random beer page
 - [ ] Debug 🔧
 - [ ] Deploy 🌏
